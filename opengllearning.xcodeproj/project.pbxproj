@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F529B3A72275F86B00E6AD2A /* resources in CopyFiles */ = {isa = PBXBuildFile; fileRef = F529B3A52275F85700E6AD2A /* resources */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F5B3707E226380BB002C3A53 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5B3707D226380BB002C3A53 /* main.cpp */; };
 		F5B3708622638172002C3A53 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B3708522638172002C3A53 /* OpenGL.framework */; };
 		F5B37088226381E0002C3A53 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B37087226381E0002C3A53 /* libGLEW.2.1.0.dylib */; };
@@ -14,6 +15,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		F529B3A62275F86300E6AD2A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				F529B3A72275F86B00E6AD2A /* resources in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5B37078226380BB002C3A53 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -26,6 +37,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F529B3A42275D98900E6AD2A /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		F529B3A52275F85700E6AD2A /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
 		F5B3707A226380BB002C3A53 /* opengllearning */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = opengllearning; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B3707D226380BB002C3A53 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F5B3708522638172002C3A53 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -67,7 +80,9 @@
 		F5B3707C226380BB002C3A53 /* opengllearning */ = {
 			isa = PBXGroup;
 			children = (
+				F529B3A52275F85700E6AD2A /* resources */,
 				F5B3707D226380BB002C3A53 /* main.cpp */,
+				F529B3A42275D98900E6AD2A /* Shader.h */,
 			);
 			path = opengllearning;
 			sourceTree = "<group>";
@@ -92,6 +107,7 @@
 				F5B37076226380BB002C3A53 /* Sources */,
 				F5B37077226380BB002C3A53 /* Frameworks */,
 				F5B37078226380BB002C3A53 /* CopyFiles */,
+				F529B3A62275F86300E6AD2A /* CopyFiles */,
 			);
 			buildRules = (
 			);

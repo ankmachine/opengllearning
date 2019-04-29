@@ -136,10 +136,9 @@ int main(int argc, const char * argv[]) {
         
         ourShader.Use();
         
-        /*glActiveTexture( GL_TEXTURE0 );
+        glActiveTexture( GL_TEXTURE0 );
         glBindTexture( GL_TEXTURE_2D, texture );
         glUniform1i( glGetUniformLocation( ourShader.Program, "ourTexture" ), 0 );
-        */
         
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);

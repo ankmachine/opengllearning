@@ -12,6 +12,7 @@
 		F58D62E12277619200B28278 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = F58D62E02277619200B28278 /* image_DXT.c */; };
 		F58D62E3227761AA00B28278 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = F58D62E2227761A900B28278 /* image_helper.c */; };
 		F58D62E52277796E00B28278 /* etc1_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = F58D62E42277796E00B28278 /* etc1_utils.c */; };
+		F58D62E72277E7C500B28278 /* glm.hpp in Frameworks */ = {isa = PBXBuildFile; fileRef = F58D62E62277E7C500B28278 /* glm.hpp */; };
 		F5B3707E226380BB002C3A53 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5B3707D226380BB002C3A53 /* main.cpp */; };
 		F5B3708622638172002C3A53 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B3708522638172002C3A53 /* OpenGL.framework */; };
 		F5B37088226381E0002C3A53 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B37087226381E0002C3A53 /* libGLEW.2.1.0.dylib */; };
@@ -48,6 +49,7 @@
 		F58D62E02277619200B28278 /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = opengllearning/SOIL2/image_DXT.c; sourceTree = "<group>"; };
 		F58D62E2227761A900B28278 /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = opengllearning/SOIL2/image_helper.c; sourceTree = "<group>"; };
 		F58D62E42277796E00B28278 /* etc1_utils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = etc1_utils.c; path = opengllearning/SOIL2/etc1_utils.c; sourceTree = "<group>"; };
+		F58D62E62277E7C500B28278 /* glm.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = glm.hpp; path = ../../../../../../usr/local/Cellar/glm/0.9.9.5/include/glm/glm.hpp; sourceTree = "<group>"; };
 		F5B3707A226380BB002C3A53 /* opengllearning */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = opengllearning; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B3707D226380BB002C3A53 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F5B3708522638172002C3A53 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58D62E72277E7C500B28278 /* glm.hpp in Frameworks */,
 				F5B3708A22638230002C3A53 /* libglfw.3.2.dylib in Frameworks */,
 				F5B37088226381E0002C3A53 /* libGLEW.2.1.0.dylib in Frameworks */,
 				F5B3708622638172002C3A53 /* OpenGL.framework in Frameworks */,
@@ -104,6 +107,7 @@
 		F5B3708422638172002C3A53 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F58D62E62277E7C500B28278 /* glm.hpp */,
 				F5B3708922638230002C3A53 /* libglfw.3.2.dylib */,
 				F5B37087226381E0002C3A53 /* libGLEW.2.1.0.dylib */,
 				F5B3708522638172002C3A53 /* OpenGL.framework */,
@@ -294,7 +298,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glm/0.9.9.5/include,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glew/2.1.0/lib,
@@ -308,7 +315,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glm/0.9.9.5/include,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glew/2.1.0/lib,

@@ -16,6 +16,9 @@
 #include <GLFW/glfw3.h>
 
 #include "SOIL2/SOIL2.h"
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 const GLint WIDTH = 800, HEIGHT = 600;
 
@@ -136,12 +139,21 @@ int main(int argc, const char * argv[]) {
         
         ourShader.Use();
         
+        glm::mat4 transform;
+        transform = glm::translate( transform, glm::vec3( 0.5f, -0.5f, 0.0f ) );
+        transform = glm::rotate( transform, ( GLfloat)glfwGetTime( ) * -5.0f, glm::vec3( 0.0f, 0.0f, 1.0f ) );
+        
+        // Get matrix's uniform location and set matrix
+        GLint transformLocation = glGetUniformLocation( ourShader.Program, "transform" );
+        glUniformMatrix4fv( transformLocation, 1, GL_FALSE, glm::value_ptr( transform ) );
+        
         glActiveTexture( GL_TEXTURE0 );
         glBindTexture( GL_TEXTURE_2D, texture );
         glUniform1i( glGetUniformLocation( ourShader.Program, "ourTexture" ), 0 );
         
         glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        //glDrawArrays(GL_TRIANGLES, 0, 3);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
         
         glfwSwapBuffers(window);
